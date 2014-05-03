@@ -1,28 +1,27 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the backend of the chat app that does broascasting of message. 
+User(requester) will broadcast message(request) to a specific geographical area(coordinates and radius).
+User(responder) in that area will receive notification and send message(responses) to the braodcast message.
+REST API will be design in handling request
 
-Things you may want to cover:
+Concept to be familisr with:
+* Messaging Queue or Real time server push/sub model
+* REST with grape
+* mongodb
+* Geo searching in mongo
 
-* Ruby version
+Things pending:
 
-* System dependencies
+* An authentication module to work with REST API
+* REST API development using grape(an microframework to be mounted into Rails)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Things proposed
+* an always running service to handle user location (so that the user will be broadcasted). 
+  - We can built it using nodejs or ruby websocket or use a third party service like firebase or pusher (http://pusher.com/)
+  - User's phone will keep sending GPS signals
+  - When the user's GPS signals match any of the bradcast message's area, user will be broadcasted.
+* an notification module to send notification to the sender and user in a geographical area.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Please feel free to correct or add any missing components.
