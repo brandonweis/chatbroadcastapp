@@ -5,16 +5,19 @@ User(requester) will broadcast message(request) to a specific geographical area(
 User(responder) in that area will receive notification and send message(responses) to the braodcast message.
 REST API will be design in handling request
 
+
 Concept to be familisr with:
 * Messaging Queue or Real time server push/sub model
 * REST with grape
 * mongodb
 * Geo searching in mongo
 
+
 Things pending:
 
 * An authentication module to work with REST API
 * REST API development using grape(an microframework to be mounted into Rails)
+
 
 Things proposed
 * an always running service to handle user location (so that the user will be broadcasted). 
