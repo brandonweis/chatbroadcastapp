@@ -1,30 +1,37 @@
 == README
 
-This is the backend of the chat app that does broascasting of message. 
+This is the backend of the chat app that does message broadcasting. 
 User(requester) will broadcast message(request) to a specific geographical area(coordinates and radius).
-User(responder) in that area will receive notification and send message(responses) to the braodcast message.
-REST API will be design in handling request
+User(responder) in that area will receive notification and send responses to the braodcast message.
+REST API will be designed in handling request.
 
+---
 
-Concept to be familisr with:
+Concept to be familiar with:
 * Messaging Queue or Real time server push/sub model
-* REST with grape
+* REST with grape - https://github.com/intridea/grape
 * mongodb
 * Geo searching in mongo
-
+* OAuth
+#
+#
+#
 
 Things pending:
 
 * An authentication module to work with REST API
 * REST API development using grape(an microframework to be mounted into Rails)
-
+#
+#
+#
 
 Things proposed
 * an always running service to handle user location (so that the user will be broadcasted). 
-  - We can built it using nodejs or ruby websocket or use a third party service like firebase or pusher (http://pusher.com/)
+  - We can built it using nodejs or ruby websocket or use a third party service like firebase (https://www.firebase.com/) or pusher (http://pusher.com/)
   - User's phone will keep sending GPS signals
   - When the user's GPS signals match any of the bradcast message's area, user will be broadcasted.
 * an notification module to send notification to the sender and user in a geographical area.
-
-
+#
+#
+#
 Please feel free to correct or add any missing components.
